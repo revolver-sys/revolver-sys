@@ -1,5 +1,8 @@
 Hi — I’m Alex
 
+I focus on how systems fail — and how to keep them working when they do.
+Most systems work until they don’t. I work on what happens next.
+
 I build reliability-focused systems in Go — networking, control planes, and infrastructure that must keep working under failure.
 
 My focus is not just on building systems, but on how they break:
