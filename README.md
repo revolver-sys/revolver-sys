@@ -18,13 +18,13 @@ Ethereum nodes, JSON-RPC behavior, and oracle reliability.
 ## Highlighted Projects
 
 - vpn-router-daemon (vpnrd)  
-  Local control-plane for VPN routing with strict failure handling and kill-switch guarantees.
+  A local VPN control plane designed to enforce network policy even when the tunnel fails.
 
 - lanstreamd  
-  Streaming proxy with observability for unstable or hostile network environments.
+  A streaming proxy that maintains continuity under unstable or adversarial network conditions.
 
 - Reliability Notes Series  
-  Research-style notes on RPC behavior, incident patterns, and oracle failures.
+  Explorations of how distributed systems degrade: RPC failures, retry storms, and incident patterns.
 
 ---
 
