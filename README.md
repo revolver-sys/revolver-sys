@@ -29,7 +29,11 @@ Ethereum nodes, JSON-RPC behavior, and oracle reliability.
 
 - Multi-uplink resilience  
 - Failure-aware routing  
-- Transport continuity under degradation  
+- Transport continuity under degradation
+
+---
+
+Currently exploring failure patterns in RPC and blockchain infrastructure.
 
 ---
 
@@ -37,4 +41,4 @@ Go · Networking · Distributed Systems · Observability · Fault Recovery
 
 ---
 
-Open to collaborating on networking, infrastructure, or reliability-focused Go projects.
+If you're working on systems where failure matters — we should talk.
