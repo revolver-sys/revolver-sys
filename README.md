@@ -1,27 +1,39 @@
-# Hi — I’m Alex
+Hi — I’m Alex
 
-I build **systems and networking tooling in Go**, focused on reliability, explicit policy enforcement, and failure-tolerant design.
+I build reliability-focused systems in Go — networking, control planes, and infrastructure that must keep working under failure.
+
+My focus is not just on building systems, but on how they break:
+- RPC degradation patterns
+- retry amplification
+- failure propagation across distributed components
+
+Recently, I’ve been exploring blockchain infrastructure from a systems perspective:
+Ethereum nodes, JSON-RPC behavior, and oracle reliability.
+
+---
 
 ## Highlighted Projects
 
-- **vpn-router-daemon (vpnrd)**  
-  macOS VPN gateway daemon supervising `sing-box` with strict `pf` kill-switch enforcement for LAN clients.
+- vpn-router-daemon (vpnrd)  
+  Local control-plane for VPN routing with strict failure handling and kill-switch guarantees.
 
-- **lanstreamd**  
-  LAN streaming helper daemon: forward proxy + observability for unstable or hostile networks.
+- lanstreamd  
+  Streaming proxy with observability for unstable or hostile network environments.
 
-- **Systems Notebook**  
-  Architecture notes and runnable prototypes exploring orchestration, watchdog patterns, and deterministic state machines.
+- Reliability Notes Series  
+  Research-style notes on RPC behavior, incident patterns, and oracle failures.
+
+---
 
 ## Current Focus
 
-- Multi-uplink resilience
-- Tunnel supervision and health modeling
-- Transport bonding and continuity strategies
+- Multi-uplink resilience  
+- Failure-aware routing  
+- Transport continuity under degradation  
 
-## Technical Interests
+---
 
-Go · Networking · macOS/Linux · pf · TUN · Observability · Fault Recovery · Infrastructure Tooling
+Go · Networking · Distributed Systems · Observability · Fault Recovery
 
 ---
 
