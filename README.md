@@ -1,46 +1,20 @@
 Hi — I’m Alex
 
-I focus on how systems fail — and how to keep them working when they do.
-Most systems work until they don’t. I work on what happens next.
+Go Systems & Infrastructure Engineer | github.com
 
-I build reliability-focused systems in Go — networking, control planes, and infrastructure that must keep working under failure.
+Focused on OS-adjacent reliability, network control planes, and decentralized infrastructure. 
 
-My focus is not just on building systems, but on how they break:
-- RPC degradation patterns
-- retry amplification
-- failure propagation across distributed components
+🛠️ ARCHITECTURE: 
+• Process lifecycle supervision, context cancellation, POSIX signals, and timeout-controlled daemon execution.
+• Network routing tables, NAT, SOCKS5 testing, TUN/utun interface discovery, and hard-wired LAN kill-switch architecture.
+• Advanced packet filtering using macOS pf firewall automation and dynamic anchor injection.
 
-Recently, I’ve been exploring blockchain infrastructure from a systems perspective:
-Ethereum nodes, JSON-RPC behavior, and oracle reliability.
+🌐 WEB3 INFRASTRUCTURE:
+• Production-level Ethereum execution layer operations specializing in go-ethereum (Geth).
+• Low-level client diagnostics, HTTP JSON-RPC endpoint hardening, IPC console state inspection, and mempool tracing.
+• Automated node reliability tooling engineered to keep validator connections stable behind restrictive firewalls and deep packet inspection environments.
 
----
-
-## Highlighted Projects
-
-- vpn-router-daemon (vpnrd)  
-  A local VPN control plane designed to enforce network policy even when the tunnel fails.
-
-- lanstreamd  
-  A streaming proxy that maintains continuity under unstable or adversarial network conditions.
-
-- Reliability Notes Series  
-  Explorations of how distributed systems degrade: RPC failures, retry storms, and incident patterns.
-
----
-
-## Current Focus
-
-- Multi-uplink resilience  
-- Failure-aware routing  
-- Transport continuity under degradation
-
----
-
-Currently exploring failure patterns in RPC and blockchain infrastructure.
-
----
-
-Go · Networking · Distributed Systems · Observability · Fault Recovery
+"I build infrastructure that can fail, reveal exactly why it failed, and recover deterministically without human intervention."
 
 ---
 
