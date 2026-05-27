@@ -3,9 +3,9 @@
 **Go Infrastructure Engineer**  
 **Network control planes · Web3 infrastructure · OS-adjacent reliability**
 
-Building Go infrastructure tools for observable and recoverable systems; currently exploring AI-assisted workflows for Web3 operations and backend reliability.
+Building Go infrastructure tools for observable, recoverable systems; currently exploring AI-assisted workflows for Web3 operations and backend reliability.
 
-I build Go systems close to the operating system: processes, signals, timeouts, routing tables, NAT, firewalls, tunnels, health checks, watchdogs, and deterministic recovery.
+I build Go systems close to the operating system: processes, signals, timeouts, routing tables, NAT, firewalls, TUN interfaces, health checks, watchdogs, and deterministic recovery.
 
 My focus is backend infrastructure that can be inspected, restarted, verified, and recovered.
 
@@ -34,11 +34,11 @@ My focus is backend infrastructure that can be inspected, restarted, verified, a
 - DNS / DHCP
 - SOCKS5 testing
 - TUN / utun interfaces
-- macOS `pf` firewall rules
+- Host firewall policy and dynamic rule orchestration
 - Dynamic firewall anchors
-- LAN-to-WAN leak prevention
-- Kill-switch architecture
-- Tunnel-bound routing
+- Fail-closed LAN traffic protection
+- Transport-bound routing policy
+- Secure-path recovery
 - Network-dependent service recovery
 
 **Web3 infrastructure**
@@ -57,9 +57,9 @@ My focus is backend infrastructure that can be inspected, restarted, verified, a
 
 ## Current Focus
 
-I am building and documenting small infrastructure systems in Go:
+I am building and documenting infrastructure systems in Go:
 
-- control-plane daemons
+- local-network control-plane daemons
 - network automation tools
 - process supervisors
 - reliability tooling
@@ -76,22 +76,47 @@ I care about what happens after a system starts:
 
 ---
 
-## Selected Project Direction
+## Main Project
 
-My strongest current work is a Go-based network control-plane project for macOS.
+[`xrouter`](https://github.com/revolver-sys/xrouter) is my current main infrastructure project.
 
-The system coordinates external tunnel processes, discovers runtime network interfaces, applies firewall/NAT state, performs health checks, and enforces strict traffic safety rules.
+`xrouter` is a Go-based LAN gateway control plane for secure transport backends, `pf`/NAT orchestration, and fail-closed traffic protection.
 
-The important part is not the tunnel itself.
+The current implementation provides a working macOS gateway daemon that coordinates a TUN-based transport process, discovers runtime `utun` interfaces, applies dynamic `pf` policy, performs health checks, and triggers deterministic recovery when the configured secure path becomes unavailable.
+
+The important part is not a single transport implementation.
 
 The important part is the control plane:
 
 - process supervision
 - dynamic interface discovery
-- firewall state orchestration
-- routing safety
+- firewall / NAT state orchestration
+- transport-bound routing policy
+- fail-closed LAN traffic protection
 - deterministic recovery
 - operational diagnostics
+
+`xrouter` is the first working stage of a broader local-network routing platform, with active development direction toward pluggable transport backends, Docker-based backend isolation, live status tracking, event streams, and multi-node deployment models.
+
+---
+
+## Additional Project Directions
+
+**LAN / local network tooling**
+
+- local gateway automation
+- network recovery workflows
+- status and health inspection
+- host-level routing diagnostics
+- controlled failure handling
+
+**Web3 / RPC reliability**
+
+- node-operation labs
+- JSON-RPC inspection
+- execution-layer experiments
+- failure-pattern analysis
+- operational debugging from an infrastructure perspective
 
 ---
 
@@ -117,4 +142,3 @@ I’m interested in infrastructure-heavy backend roles involving:
 ---
 
 If you are building systems where failure matters — we should talk.
-
